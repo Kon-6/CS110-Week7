@@ -50,5 +50,6 @@ This assignment helped me understand how C# and XAML work together. I also learn
 ### 7B - Screen Capture
 - [7B Evidence](Evidence/7B/)
 
-### Final
-- [Final Evidence](Evidence/Final/)
+### Week 7 Receipt
+[View My Final Receipt](Evidence/Final/CS110-W7-KAIROVA-CF7FB484.html)
+
