@@ -65,5 +65,58 @@ public partial class MainWindow : Window
     {
         ShowSlide(0);
     }
-// DAY 7B: paste CaptureHandlers.cs.txt HERE, inside these class braces.
+private BitmapSource? capturedImage;
+
+    private void CaptureButton_Click(object sender, RoutedEventArgs e)
+    {
+        try
+        {
+            capturedImage = CaptureService.CapturePrimaryScreen();
+            CapturePreview.Source = capturedImage;
+            SaveCaptureButton.IsEnabled = true;
+            ClearCaptureButton.IsEnabled = true;
+            StatusText.Text = "Capture ready. Inspect it before saving or sharing.";
+        }
+        catch (Exception ex)
+        {
+            StatusText.Text = "Capture failed: " + ex.Message;
+        }
+    }
+
+    private void SaveCaptureButton_Click(object sender, RoutedEventArgs e)
+    {
+        if (capturedImage is null) return;
+        var dialog = new Microsoft.Win32.SaveFileDialog
+        {
+            Filter = "PNG image|*.png", DefaultExt = ".png",
+            AddExtension = true, FileName = "story-capture.png", OverwritePrompt = true
+        };
+        if (dialog.ShowDialog(this) != true)
+        {
+            StatusText.Text = "Save cancelled. Preview kept.";
+            return;
+        }
+        try
+        {
+            var encoder = new PngBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(capturedImage));
+            using var file = File.Create(dialog.FileName);
+            encoder.Save(file);
+            StatusText.Text = "PNG saved: " + dialog.FileName;
+        }
+        catch (Exception ex)
+        {
+            StatusText.Text = "Save failed. Choose a writable folder. " + ex.Message;
+        }
+    }
+
+    private void ClearCaptureButton_Click(object sender, RoutedEventArgs e)
+    {
+        capturedImage = null;
+        CapturePreview.Source = null;
+        SaveCaptureButton.IsEnabled = false;
+        ClearCaptureButton.IsEnabled = false;
+        StatusText.Text = "Preview cleared. Story position kept.";
+    }
+
 }
