@@ -39,3 +39,16 @@ I completed the story prototype using PowerPoint and edited the WPF project in V
 ## What I Learned
 
 This assignment helped me understand how C# and XAML work together. I also learned how to organize images, create a story flow, and use code to move between slides.
+
+## Week 7 Evidence
+
+### 7A - PowerPoint Story
+- [PowerPoint Screenshot 1](Evidence/7A/PowerPoint1.png)
+- [PowerPoint Screenshot 2](Evidence/7A/PowerPoint2.png)
+- [PowerPoint Screenshot 3](Evidence/7A/PowerPoint3.png)
+
+### 7B - Screen Capture
+- [7B Evidence](Evidence/7B/)
+
+### Final
+- [Final Evidence](Evidence/Final/)
