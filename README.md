@@ -21,3 +21,21 @@ Next and Back navigation.
 Restart functionality.
 
 Image loading and error handling.
+
+## Tools Used
+
+Visual Studio Code
+
+C# and XAML
+
+PowerPoint
+
+GitHub
+
+## Testing and Limitations
+
+I completed the story prototype using PowerPoint and edited the WPF project in Visual Studio Code on my MacBook. I could not run the WPF application because it requires Windows.
+
+## What I Learned
+
+This assignment helped me understand how C# and XAML work together. I also learned how to organize images, create a story flow, and use code to move between slides.
