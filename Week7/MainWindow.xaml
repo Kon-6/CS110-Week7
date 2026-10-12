@@ -17,7 +17,15 @@
     <Button Content="_Restart" Click="RestartButton_Click" Padding="18,10" Margin="0,0,8,8"/>
    </WrapPanel>
    <!-- DAY 7B: put the CaptureControls.xaml snippet INSIDE this panel. -->
-   <StackPanel x:Name="CapturePanel"/>
+   <StackPanel x:Name="CapturePanel">
+       <TextBlock Text="SCREEN CAPTURE / Primary display" FontSize="16" Foreground="#EED19B"/>
+<WrapPanel Margin="0,8">
+ <Button Content="_Capture screen" Click="CaptureButton_Click" Padding="14,8" Margin="0,0,8,8"/>
+ <Button x:Name="SaveCaptureButton" Content="_Save PNG" Click="SaveCaptureButton_Click" IsEnabled="False" Padding="14,8" Margin="0,0,8,8"/>
+ <Button x:Name="ClearCaptureButton" Content="C_lear" Click="ClearCaptureButton_Click" IsEnabled="False" Padding="14,8" Margin="0,0,8,8"/>
+</WrapPanel>
+<Image x:Name="CapturePreview" Height="140" Stretch="Uniform" AutomationProperties.Name="Captured screen preview"/>
+   </StackPanel>
    <TextBlock x:Name="StatusText" Text="Ready. Use Next to read the story." TextWrapping="Wrap"
               AutomationProperties.LiveSetting="Polite" Margin="0,10"/>
   </StackPanel>

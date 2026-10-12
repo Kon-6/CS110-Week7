@@ -65,5 +65,5 @@ public partial class MainWindow : Window
     {
         ShowSlide(0);
     }
-    // DAY 7B: paste CaptureHandlers.cs.txt HERE, inside these class braces.
+// DAY 7B: paste CaptureHandlers.cs.txt HERE, inside these class braces.
 }
