@@ -1,0 +1,7 @@
+AI Prompt: I asked AI to suggest one test for the Clear button in my C# WPF story game.
+
+AI Response: Test the Clear button after capturing an image. The preview should disappear, the Save and Clear buttons should become disabled, and the story should stay on the same slide.
+
+Observed Result: I added the capture code, but I could not run the WPF application on my Mac to verify the test.
+
+Decision: Keep the suggested test because it checks that clearing the screenshot does not affect the story. I still need to test it on Windows.
