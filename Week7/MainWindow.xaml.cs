@@ -11,9 +11,9 @@ public partial class MainWindow : Window
     private record Slide(string Text, string ImagePath, string Description);
     private readonly Slide[] slides =
     {
-        new Slide("A signal reaches the next crew. What do they need to know?", "Assets/Images/01.png", "A signal card: the story begins."),
-        new Slide("The crew compares the route with the last reliable observation.", "Assets/Images/02.png", "A route card: inspect the problem."),
-        new Slide("Leave a clear account for the next reader. Your story continues here.", "Assets/Images/03.png", "A handoff card: record the result.")
+        new Slide("Your arrival in Greenward", "Assets/Images/01.png", "You arrive in Greedward and meet Sana, who needs your help training new garden operators"),
+        new Slide("The outdated Instructions", "Assets/Images/02.png", "Sana shows you the old training instructions. Some steps are confusing and no longer match how the garden operates."),
+        new Slide("A New Beginning", "Assets/Images/03.png", "You help Sana create clearer instructions. The new operators understand their tasks, and the garden team is ready to succeed.")
     };
     private int currentSlide = 0; // Array positions start at zero.
 
